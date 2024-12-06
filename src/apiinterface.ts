@@ -20,8 +20,6 @@ export const DIALOG_TITLE = {
   CATEGORY: "Category",
 };
 
-
-
 export const HTTP_STATUS = {
   UNAUTHORIZED: 401,
   NOT_FOUND: 404,
@@ -32,3 +30,6 @@ export const HTTP_STATUS = {
 // 講師ログイン
 
 export const HOME = API_ROOT_URL + "/api/WeatherForecast/test";
+
+//ログイン
+export const LOGIN_AUTHENTICATION_API_URL = API_ROOT_URL + "/api/Login/login";

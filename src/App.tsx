@@ -1,38 +1,15 @@
 import './App.css';
-import { HOME } from './apiinterface';
+import { useRoutes } from "react-router-dom";
+import Login from './Login/Login';
+import NextScreen from './Login/NextScreen';
 
-function App() {
-
-  const handleButtonClick = async () => {
-    fetch(HOME, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        name: "TEST"
-      })
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => console.log(data))
-      .catch(error => console.error('Error:', error));
-  };
-
-
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React & ASP.NET Core Demo</h1>
-        <button onClick={handleButtonClick}>Fetch Data</button>
-      </header>
-    </div>
+const App = (): JSX.Element => {
+  const routes = useRoutes(
+    [
+      { path: '/', element: <Login /> },
+      { path: '/next', element: <NextScreen /> },
+    ]
   );
+  return <>{routes}</>
 }
-
 export default App;
