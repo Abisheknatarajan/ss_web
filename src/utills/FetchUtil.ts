@@ -1,4 +1,4 @@
-import { CSV_HEADERS, JSON_HEADERS, PDF_HEADERS } from "../apiinterface"
+import { CSV_HEADERS, JSON_HEADERS, PDF_HEADERS } from "../apiInterface"
 
 export const getJsonPostRequestInit = (controller?: AbortController, body?: BodyInit): RequestInit => {
     return {

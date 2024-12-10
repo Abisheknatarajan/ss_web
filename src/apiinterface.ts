@@ -30,7 +30,10 @@ export const HTTP_STATUS = {
 // 講師ログイン
 
 export const HOME = API_ROOT_URL + "/api/WeatherForecast/test";
-
 //ログイン
 export const LOGIN_AUTHENTICATION_API_URL = API_ROOT_URL + "/api/Login/login";
 export const RemoteRegister = API_ROOT_URL + "/api/RemoteReg/RemoteReg";
+export const CREATE = API_ROOT_URL + "/api/User/create";
+export const USAGE_LIST = API_ROOT_URL + "/api/User/usage-list";
+export const USER_LIST = API_ROOT_URL + "/api/User/user-list";
+
