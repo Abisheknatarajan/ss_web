@@ -1,4 +1,4 @@
-import { AJAX_TIMEOUT } from "../apiinterface";
+import { AJAX_TIMEOUT } from "../apiInterface";
 
 export const useFetchTimeout = (): [controller: AbortController, timer: () => number] => {
     const controller = new AbortController();
