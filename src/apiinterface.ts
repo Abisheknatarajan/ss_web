@@ -39,4 +39,3 @@ export const USER_LIST = API_ROOT_URL + "/api/User/user-list";
 export const USER_BY = API_ROOT_URL + "/api/User/user-by";
 
 
-

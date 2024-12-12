@@ -4,7 +4,6 @@ import { AiOutlineSearch, AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
 import { BoxContainer, FormContainer } from './SystemUsageListStyle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { USAGE_LIST, USER_BY, USER_LIST } from '../../apiinterface';
-
 interface SystemUsage {
     remoteId: string;
     remoteName: string;
@@ -72,6 +71,7 @@ export default function SystemUsageList() {
     const updateUsedBy = async (remoteId: string, newUsedBy: string) => {
         try {
             const response = await fetch(USER_BY, {
+
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
