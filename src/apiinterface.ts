@@ -33,3 +33,4 @@ export const HOME = API_ROOT_URL + "/api/WeatherForecast/test";
 
 //ログイン
 export const LOGIN_AUTHENTICATION_API_URL = API_ROOT_URL + "/api/Login/login";
+export const RemoteRegister = API_ROOT_URL + "/api/RemoteReg/RemoteReg";
