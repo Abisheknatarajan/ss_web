@@ -36,4 +36,7 @@ export const RemoteRegister = API_ROOT_URL + "/api/RemoteReg/RemoteReg";
 export const CREATE = API_ROOT_URL + "/api/User/create";
 export const USAGE_LIST = API_ROOT_URL + "/api/User/usage-list";
 export const USER_LIST = API_ROOT_URL + "/api/User/user-list";
+export const USER_BY = API_ROOT_URL + "/api/User/user-by";
+
+
 

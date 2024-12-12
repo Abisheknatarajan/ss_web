@@ -3,7 +3,7 @@ import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRo
 import { AiOutlineSearch, AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
 import { BoxContainer, FormContainer } from './SystemUsageListStyle';
 import LogoutIcon from '@mui/icons-material/Logout';
-import { USAGE_LIST, USER_LIST } from '../../apiinterface';
+import { USAGE_LIST, USER_BY, USER_LIST } from '../../apiinterface';
 
 interface SystemUsage {
     remoteId: string;
@@ -71,12 +71,15 @@ export default function SystemUsageList() {
     };
     const updateUsedBy = async (remoteId: string, newUsedBy: string) => {
         try {
-            const response = await fetch(`${USAGE_LIST}/${remoteId}`, {
+            const response = await fetch(USER_BY, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ usedBy: newUsedBy }),
+                body: JSON.stringify({
+                    RemoteId: remoteId,
+                    User: newUsedBy,
+                }),
             });
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
